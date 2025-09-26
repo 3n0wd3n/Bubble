@@ -44,9 +44,37 @@ export default function Home() {
       {/* main */}
       <main className={styles.main}>
         {/* intro */}
-        <section>
-          <h1></h1>
-          <p></p>
+        <section className={styles.intro}>
+          <div className={styles.intro__content}>
+            <div className={styles.intro__heading_container}>
+              <span>Bubble.</span>
+              <h1>
+                A new <span className={`${styles["outlined-text"]}`}>social network</span> where photos and videos are
+                tied to real-world places
+              </h1>
+            </div>
+            <p>
+              Leave photos or videos at real locations and create stories waiting to be discovered. Every place becomes
+              a canvas for your most meaningful moments.
+            </p>
+            <div className={styles.intro__buttons}>
+              <a href='#' className={`${styles.intro__button} ${styles["intro__button--filled"]}`}>
+                Get the app
+              </a>
+              <a href='#' className={`${styles.intro__button} ${styles["intro__button--ghost"]}`}>
+                Advertise on Bubble
+              </a>
+            </div>
+          </div>
+          <div className={styles.image}>
+            <Image
+              src='/intro_image.png'
+              alt='Intro image'
+              width={619}
+              height={613}
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
         </section>
         {/* about - why would they need us */}
         <section>

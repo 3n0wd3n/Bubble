@@ -176,14 +176,62 @@ export default function Home() {
           </div>
         </section>
         {/* usage - share, follow, explore */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.follow_section}>
+          {/* general container */}
+          <div className={`${styles["container--follow"]}`}>
+            <span className={styles.tagline}>03 Share experiences</span>
+            <div className={styles.follow__content}>
+              <div className={styles.follow__image}>
+                <Image
+                  src='/follow-image.png'
+                  alt='Follow image'
+                  width={632}
+                  height={625}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              <div className={styles.follow__container}>
+                <span>Connect</span>
+                <h2>Build a global community of storytellers</h2>
+                <p>Interact with memories and create a network of shared experiences across different locations.</p>
+              </div>
+            </div>
+          </div>
         </section>
         {/* download app with qr */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.download_section}>
+          {/* general container */}
+          <div className={`${styles["container--download"]}`}>
+            <article className={styles.download__content}>
+              <h2>Be the first to turn photos into an experience.</h2>
+              <p>Download the app and begin transforming your locations into personal storytelling platforms.</p>
+              <div className={styles.download__buttons}>
+                <a href='#' className={`${styles.download__button} ${styles["download__button--filled"]}`}>
+                  <Image src='/apple-image.png' alt='Apple Download Button' width={40} height={40} />
+                  <div className={`${styles["download__button--text"]}`}>
+                    <span>Download on the</span>
+                    <span>App Store</span>
+                  </div>
+                </a>
+                <a href='#' className={`${styles.download__button} ${styles["download__button--ghost"]}`}>
+                  <Image src='/android-image.png' alt='Apple Download Button' width={30} height={30} />
+                  <div className={`${styles["download__button--text"]}`}>
+                    <span>Download on the</span>
+                    <span>Android</span>
+                  </div>
+                </a>
+              </div>
+            </article>
+            <div className={styles.qr__image}>
+              <Image
+                src='/qr-image.png'
+                alt='QR image'
+                width={450}
+                height={450}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+          </div>
         </section>
         {/* f&q */}
         <section>

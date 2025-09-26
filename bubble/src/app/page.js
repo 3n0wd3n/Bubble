@@ -1,13 +1,45 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       {/* header */}
-      <header>
+      <header className={styles.header}>
         {/* navigation */}
-        <nav></nav>
+        <nav className={styles.nav}>
+          <div className={styles.nav__container}>
+            {/* logo */}
+            <Link href='/' className='logo'>
+              <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
+            </Link>
+            {/* links */}
+            <ul className={styles.nav__list}>
+              <li className={styles.nav__item}>
+                <a href='#'>Really? Another Social App</a>
+              </li>
+              <li className={styles.nav__item}>
+                <a href='#'>How To Master Bubble</a>
+              </li>
+              <li className={styles.nav__item}>
+                <a href='#'>F&Q</a>
+              </li>
+              <li className={styles.nav__item}>
+                <a href='#'>Partners</a>
+              </li>
+            </ul>
+          </div>
+          {/* buttons */}
+          <div className={styles.nav__buttons}>
+            <a href='#' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
+              Advertise on Bubble
+            </a>
+            <a href='#' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>
+              Get the app
+            </a>
+          </div>
+        </nav>
       </header>
       {/* main */}
       <main className={styles.main}>

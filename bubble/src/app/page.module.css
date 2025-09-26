@@ -4,21 +4,26 @@
   flex-direction: column;
   justify-items: flex-start;
   min-height: 100svh;
-  padding: 64px;
   gap: 64px;
   font-family: var(--font-figtree), sans-serif;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto; /* zarovnání doprostřed */
+  margin: 0 auto;
 }
 
 .header {
   width: 100%;
 }
 
+.container--header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 64px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .nav {
@@ -102,6 +107,13 @@
 }
 
 .intro {
+  background-color: var(--primary);
+}
+
+.container--intro {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   gap: 80px;
@@ -139,11 +151,17 @@
 }
 
 .about {
+  background-color: var(--primary);
+}
+
+.container--about {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 80px;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 80px;
   padding: 56px 0;
 }
 
@@ -176,11 +194,17 @@
 }
 
 .create_section {
-  padding: 56px 0;
+  background-color: var(--background-sections-lightgray);
+}
+
+.container--create {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 56px 0;
   gap: 48px;
-  /* background-color: var(--background-sections-lightgray); */
 }
 
 .create_section .tagline {

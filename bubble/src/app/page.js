@@ -120,8 +120,8 @@ export default function Home() {
               <Image
                 src='/create-image.png'
                 alt='Intro image'
-                width={619}
-                height={613}
+                width={600}
+                height={733}
                 style={{ width: "100%", height: "auto" }}
               />
             </div>

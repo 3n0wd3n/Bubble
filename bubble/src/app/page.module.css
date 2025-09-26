@@ -19,7 +19,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 112px;
 }
 
 .nav {
@@ -107,6 +106,8 @@
   flex-direction: row;
   gap: 80px;
   flex-wrap: wrap;
+  padding-top: 80px;
+  padding-bottom: 56px;
 }
 
 .intro__content {
@@ -132,7 +133,8 @@
   font-weight: 600;
 }
 
-.intro__image {
+.intro__image,
+.create__image {
   flex: 1 1 400px;
 }
 
@@ -142,6 +144,7 @@
   flex-direction: column;
   gap: 80px;
   width: 100%;
+  padding: 56px 0;
 }
 
 .about h2 {
@@ -170,6 +173,38 @@
 
 .item__text_container p:first-of-type {
   font-weight: 600;
+}
+
+.create_section {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  /* background-color: var(--background-sections-lightgray); */
+}
+
+.create_section .tagline {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.create__content {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.create__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 400px;
+  justify-content: center;
+  gap: 32px;
+}
+
+.create__container h2 {
+  font-size: 48px;
 }
 
 .footer {

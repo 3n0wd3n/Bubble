@@ -113,9 +113,27 @@ export default function Home() {
           </div>
         </section>
         {/* usage - create bubble */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.create_section}>
+          <span className={styles.tagline}>01 Create memmories</span>
+          <div className={styles.create__content}>
+            <div className={styles.create__image}>
+              <Image
+                src='/create-image.png'
+                alt='Intro image'
+                width={619}
+                height={613}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+            <div className={styles.create__container}>
+              <span>Capture</span>
+              <h2>Leave photos at specific locations</h2>
+              <p>
+                Select a meaningful location, upload your photo or video and select who can see your bubble. Your memory
+                becomes a hidden story waiting to be discovered by others.
+              </p>
+            </div>
+          </div>
         </section>
         {/* usage - observe photos of others */}
         <section>

@@ -77,9 +77,40 @@ export default function Home() {
           </div>
         </section>
         {/* about - why would they need us */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.about}>
+          <h2>Why would you need another social network? </h2>
+          <div className={styles.about__container}>
+            <article className={styles.about__item}>
+              <Image src='/IoShareSocialOutline.svg' alt='Share icon' width={48} height={48} />
+              <div className={styles.item__text_container}>
+                <p>
+                  Allows you to share your memories in a unique way with friends, followers, or keep them for yourself.
+                </p>
+                <p>Capture moments exactly where they happen and decide who can unlock them.</p>
+              </div>
+            </article>
+            <article className={styles.about__item}>
+              <Image src='/IoEarthOutline.svg' alt='Share icon' width={48} height={48} />
+              <div className={styles.item__text_container}>
+                <p>Lets you discover hidden stories left by others in real places.</p>
+                <p>Explore memories waiting to be found and uncover stories tied to meaningful locations.</p>
+              </div>
+            </article>
+            <article className={styles.about__item}>
+              <Image src='/IoSparklesOutline.svg' alt='Share icon' width={48} height={48} />
+              <div className={styles.item__text_container}>
+                <p>Brings excitement to your everyday life by exploring memories nearby</p>
+                <p>Leave surprises nearby and explore new spots to turn everyday places into adventures.</p>
+              </div>
+            </article>
+            <article className={styles.about__item}>
+              <Image src='/IoMap.svg' alt='Share icon' width={48} height={48} />
+              <div className={styles.item__text_container}>
+                <p>Transform space around you into unforgettable adventures</p>
+                <p>Create a digital time capsule that connects people through shared experiences and locations.</p>
+              </div>
+            </article>
+          </div>
         </section>
         {/* usage - create bubble */}
         <section>

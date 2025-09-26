@@ -1,3 +1,4 @@
+// TODO: create router for more pages, add gifs with animations instead of just photos, create animation when scrolling
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -71,7 +72,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className={styles.image}>
+            <div className={styles.intro__image}>
               <Image
                 src='/intro_image.png'
                 alt='Intro image'
@@ -131,7 +132,7 @@ export default function Home() {
               <div className={styles.create__image}>
                 <Image
                   src='/create-image.png'
-                  alt='Intro image'
+                  alt='Create image'
                   width={600}
                   height={733}
                   style={{ width: "100%", height: "auto" }}
@@ -149,9 +150,30 @@ export default function Home() {
           </div>
         </section>
         {/* usage - observe photos of others */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.observe_section}>
+          {/* general container */}
+          <div className={`${styles["container--observe"]}`}>
+            <span className={styles.tagline}>02 Discover stories</span>
+            <div className={styles.observe__content}>
+              <div className={styles.observe__container}>
+                <span>Explore</span>
+                <h2>Reveal moments left by others around you.</h2>
+                <p>
+                  Visit locations and unlock hidden stories left by others. Each place becomes a gateway to unexpected
+                  narratives.
+                </p>
+              </div>
+              <div className={styles.observe__image}>
+                <Image
+                  src='/observe-image.png'
+                  alt='Observe image'
+                  width={600}
+                  height={639}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+          </div>
         </section>
         {/* usage - share, follow, explore */}
         <section>

@@ -234,14 +234,109 @@ export default function Home() {
           </div>
         </section>
         {/* f&q */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.faq_section}>
+          <div className={styles.faq__heading}>
+            <h2>FAQs</h2>
+            <p>Get answers to common questions about our Bubble platform.</p>
+          </div>
+          <div className={styles.faq__rows_container}>
+            <div className={styles.faq__row}>
+              <article className={styles.faq__row_item}>
+                <Image src='/IoAddCircleOutline.svg' alt='Share icon' width={48} height={48} />
+                <h5>How do I create a bubble?</h5>
+                <p>
+                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
+                  details.
+                </p>
+              </article>
+              <article className={styles.faq__row_item}>
+                <Image src='/enhanced_encryption.svg' alt='Share icon' width={48} height={48} />
+                <h5>How do I create a bubble?</h5>
+                <p>
+                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
+                  details.
+                </p>
+              </article>
+              <article className={styles.faq__row_item}>
+                <Image src='/share_location.svg' alt='Location icon' width={48} height={48} />
+                <h5>How do I create a bubble?</h5>
+                <p>
+                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
+                  details.
+                </p>
+              </article>
+            </div>
+            <div className={styles.faq__row}>
+              <article className={styles.faq__row_item}>
+                <Image src='/apps.svg' alt='Apps icon' width={48} height={48} />
+                <h5>How do I create a bubble?</h5>
+                <p>
+                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
+                  details.
+                </p>
+              </article>
+              <article className={styles.faq__row_item}>
+                <Image src='/IoInfiniteOutline.svg' alt='Infinite icon' width={48} height={48} />
+                <h5>How do I create a bubble?</h5>
+                <p>
+                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
+                  details.
+                </p>
+              </article>
+              <article className={styles.faq__row_item}>
+                <Image src='/android.svg' alt='Android icon' width={48} height={48} />
+                <h5>How do I create a bubble?</h5>
+                <p>
+                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
+                  details.
+                </p>
+              </article>
+            </div>
+          </div>
         </section>
         {/* get started */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.get_start_section}>
+          <h2>Get Started</h2>
+          <div className={styles.get_start__card_container}>
+            <article className={`${styles.get_start__card} ${styles["get_start__card--partner"]}`}>
+              <div className={styles.get_start__card_content}>
+                <h3>Partner with Bubble</h3>
+                <p>
+                  By joining the Bubble, you unlock the ability to advertise your brand, access exclusive growth
+                  features, and build connections with our community.
+                </p>
+              </div>
+              <a href='#' className={styles.get_start__card_link}>
+                Get Started
+                <Image
+                  src='/FaArrowRight.svg'
+                  alt='SVG Arrow'
+                  width={16}
+                  height={16}
+                  className={styles.get_start__link_icon}
+                />
+              </a>
+            </article>
+            <article className={`${styles.get_start__card} ${styles["get_start__card--user"]}`}>
+              <div className={styles.get_start__card_content}>
+                <h3>Partner with Bubble</h3>
+                <p>
+                  By joining the Bubble, you unlock the ability to advertise your brand, access exclusive growth
+                  features, and build connections with our community.
+                </p>
+              </div>
+              <a href='#' className={styles.get_start__card_link}>
+                Get Started
+                <Image
+                  src='/FaArrowRight.svg'
+                  alt='SVG Arrow'
+                  width={16}
+                  height={16}
+                  className={styles.get_start__link_icon}
+                />
+              </a>
+            </article>
+          </div>
         </section>
         {/* contact us */}
         <section>

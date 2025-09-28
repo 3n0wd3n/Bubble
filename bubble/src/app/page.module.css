@@ -259,7 +259,9 @@
 .create__container h2,
 .observe__container h2,
 .follow__container h2,
-.download__content h2 {
+.download__content h2,
+.faq__heading h2,
+.get_start_section h2 {
   font-size: 48px;
 }
 
@@ -340,6 +342,118 @@
 
 .download__button:hover {
   opacity: 0.9;
+}
+
+.faq_section,
+.get_start_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 56px 64px;
+}
+
+.faq__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq__rows_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 64px;
+}
+
+.faq__row {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.faq__row_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.faq__row_item h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.faq__row_item h5,
+.faq__row_item p {
+  text-align: center;
+}
+
+.get_start__card_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 48px;
+}
+
+.get_start__card {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  padding: 32px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.get_start__card:hover {
+  transform: scale(1.05);
+}
+
+.get_start__card--partner {
+  background-color: var(--background-sections-lightgray);
+}
+
+.get_start__card--user {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.get_start__card--partner .get_start__link_icon {
+  filter: var(--secondary);
+}
+
+.get_start__card--user .get_start__link_icon {
+  filter: brightness(0) invert(1);
+}
+
+.get_start__card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.get_start__card_content h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.get_start__card_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+  gap: 4px;
+}
+
+.get_start__card_link:hover {
+  gap: 6px;
+  transition: 0.3s ease;
 }
 
 .footer {

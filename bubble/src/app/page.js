@@ -339,12 +339,181 @@ export default function Home() {
           </div>
         </section>
         {/* contact us */}
-        <section>
-          <h2></h2>
-          <p></p>
+        <section className={styles.contact_section}>
+          <header className={styles.contact__header}>
+            <span className={`${styles.tagline} ${styles["tagline--light"]}`}>Connect</span>
+            <h2>Contact us</h2>
+            <p>We’re here to help you start your bubble-sharing journey and answer any questions.</p>
+          </header>
+
+          <address className={styles.contact__info}>
+            <div className={styles.contact__info_item}>
+              <Image src='/mail.svg' alt='SVG Arrow' width={24} height={24} className={styles.get_start__link_icon} />
+              <p className={styles.contact__item_content}>
+                <strong>Email:</strong>
+                <a href='mailto:support@memoriesapp.com'>support@bubble.com</a>
+              </p>
+            </div>
+            <div className={styles.contact__info_item}>
+              <Image src='/call.svg' alt='SVG Arrow' width={24} height={24} className={styles.get_start__link_icon} />
+              <p className={styles.contact__item_content}>
+                <strong>Phone:</strong>
+                <a href='tel:+61281234567'>+61 2 8123 4567</a>
+              </p>
+            </div>
+            <div className={styles.contact__info_item}>
+              <Image
+                src='/location_on.svg'
+                alt='SVG Arrow'
+                width={24}
+                height={24}
+                className={styles.get_start__link_icon}
+              />
+              <p className={styles.contact__item_content}>
+                <strong>Office:</strong>
+                Level 5, 123 Digital Lane, Sydney NSW 2000, Australia
+              </p>
+            </div>
+          </address>
         </section>
       </main>
-      <footer className={styles.footer}></footer>
+      {/* footer */}
+      <footer className={styles.footer}>
+        {/* general container */}
+        <div className={`${styles["container--footer"]}`}>
+          <div className={styles.footer__nav_container}>
+            <nav className={styles.footer__nav}>
+              {/* logo */}
+              <Link href='/' className='logo'>
+                <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
+              </Link>
+              <div className={styles.footer__nav_item}>
+                <h3>Product</h3>
+                <ul className={styles.footer__nav_links}>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Features</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Download</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Pricing</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Updates</a>
+                  </li>
+                </ul>
+              </div>
+              <div className={styles.footer__nav_item}>
+                <h3>Company</h3>
+                <ul className={styles.footer__nav_links}>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>About us</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Careers</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Press</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Contact</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <div className={styles.footer__nav_item}>
+                <h3>Resources</h3>
+                <ul className={styles.footer__nav_links}>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Help center</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Support</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Community</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Developers</a>
+                  </li>
+                  <li className={styles.footer__nav_links_item}>
+                    <a href='#'>Subscribe</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div className={styles.footer__newsletter}>
+              <header className={styles.footer__newsletter_header}>
+                <h3>Newsletter</h3>
+                <p>Stay updated on new features and community stories.</p>
+              </header>
+              <div className={styles.footer__newsletter_form}>
+                <form className={styles.footer__form_content} action='/subscribe' method='post'>
+                  <input
+                    className={styles.footer__form_input}
+                    type='email'
+                    id='newsletter-email'
+                    name='email'
+                    placeholder='Enter your email address'
+                    required
+                  />
+                  <button className={styles.footer__form_submit} type='submit'>
+                    Subscribe
+                  </button>
+                </form>
+                <p>
+                  By subscribing, you agree to our <a href='/privacy'>privacy policy</a> and{" "}
+                  <a href='#'>terms of service</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.footer__bottom}>
+            <div className={styles.footer__bottom_legal_container}>
+              <p>© 2025 Bubble App. All rights reserved.</p>
+              <ul className={styles.footer__bottom_legal}>
+                <li>
+                  <a href='#'>Privacy policy</a>
+                </li>
+                <li>
+                  <a href='#'>Terms of service</a>
+                </li>
+                <li>
+                  <a href='#'>Cookie settings</a>
+                </li>
+              </ul>
+            </div>
+
+            <ul className={styles.footer__bottom_social}>
+              <li>
+                <Link href='/' className='logo'>
+                  <Image src='/Facebook.svg' alt='FB logo' width={24} height={24} />
+                </Link>
+              </li>
+              <li>
+                <Link href='/' className='logo'>
+                  <Image src='/Instagram.svg' alt='IG logo' width={24} height={24} />
+                </Link>
+              </li>
+              <li>
+                <Link href='/' className='logo'>
+                  <Image src='/X.svg' alt='X logo' width={24} height={24} />
+                </Link>
+              </li>
+              <li>
+                <Link href='/' className='logo'>
+                  <Image src='/LinkedIn.svg' alt='LinkedIn logo' width={24} height={24} />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

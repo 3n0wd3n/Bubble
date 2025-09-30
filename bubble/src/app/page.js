@@ -319,10 +319,10 @@ export default function Home() {
             </article>
             <article className={`${styles.get_start__card} ${styles["get_start__card--user"]}`}>
               <div className={styles.get_start__card_content}>
-                <h3>Partner with Bubble</h3>
+                <h3>Be part of the Bubble</h3>
                 <p>
-                  By joining the Bubble, you unlock the ability to advertise your brand, access exclusive growth
-                  features, and build connections with our community.
+                  Enjoy our new and unique view to the photos and videos and share this excitement with your friends and
+                  followers.
                 </p>
               </div>
               <a href='#' className={styles.get_start__card_link}>

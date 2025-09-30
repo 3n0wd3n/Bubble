@@ -1,9 +1,12 @@
 // TODO: create router for more pages, add gifs with animations instead of just photos, create animation when scrolling
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { useState } from "react";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.page}>
       {/* general container */}
@@ -17,8 +20,23 @@ export default function Home() {
               <Link href='/' className='logo'>
                 <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
               </Link>
+              {/* hamburger */}
+              <button className={styles.nav__toggle} onClick={() => setIsOpen(!isOpen)} aria-label='Toggle navigation'>
+                <span />
+                <span />
+                <span />
+              </button>
               {/* links */}
-              <ul className={styles.nav__list}>
+              <ul className={`${styles.nav__list} ${isOpen ? styles["nav__list--open"] : ""}`}>
+                <button
+                  className={styles.nav__toggle}
+                  onClick={() => setIsOpen(!isOpen)}
+                  aria-label='Toggle navigation'
+                >
+                  <span />
+                  <span />
+                  <span />
+                </button>
                 <li className={styles.nav__item}>
                   <a href='#'>Really? Another Social App</a>
                 </li>
@@ -31,6 +49,7 @@ export default function Home() {
                 <li className={styles.nav__item}>
                   <a href='#'>Partners</a>
                 </li>
+                {/* hamburger */}
               </ul>
             </div>
             {/* buttons */}

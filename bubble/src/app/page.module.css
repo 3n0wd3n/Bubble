@@ -803,6 +803,10 @@
     display: flex;
   }
 
+  .footer__nav_container {
+    flex-direction: column;
+  }
+
   .footer__nav {
     flex-direction: column;
     gap: 20px;
@@ -811,6 +815,10 @@
   .footer__bottom {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .footer__bottom_legal_container{
+  flex-direction: column;
   }
 
   .footer__bottom_legal {

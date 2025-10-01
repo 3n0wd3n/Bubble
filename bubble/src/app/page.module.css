@@ -689,9 +689,19 @@
   .intro__heading_container h1 {
     font-size: 48px;
   }
+
+  .nav__buttons,
+.intro__buttons,
+.download__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
   .about h2,
   .download__content h2 {
     font-size: 36px;
+    width: 100%;
   }
 
   .create__container h2,

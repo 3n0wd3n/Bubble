@@ -3,10 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className={styles.page}>
       {/* general container */}
@@ -14,10 +27,10 @@ export default function Home() {
         {/* header */}
         <header className={styles.header}>
           {/* navigation */}
-          <nav className={styles.nav}>
+          <nav className={`${styles.nav} ${scrolled ? styles["nav--scrolled"] : ""}`}>
             <div className={styles.nav__container}>
               {/* logo */}
-              <Link href='/' className='logo'>
+              <Link href='#' className='logo'>
                 <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
               </Link>
               {/* hamburger */}
@@ -403,7 +416,7 @@ export default function Home() {
           <div className={styles.footer__nav_container}>
             <nav className={styles.footer__nav}>
               {/* logo */}
-              <Link href='/' className='logo'>
+              <Link href='#' className='logo'>
                 <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
               </Link>
               <div className={styles.footer__nav_item}>

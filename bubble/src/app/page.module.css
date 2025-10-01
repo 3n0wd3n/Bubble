@@ -321,7 +321,7 @@
 }
 
 .qr__image {
-  max-width: 450px;
+  max-width: 250px;
   width: 100%;
 }
 
@@ -695,6 +695,16 @@
 
   .nav__toggle {
     display: flex;
+  }
+
+  .download__buttons {
+    flex-direction: column;
+  }
+  .intro__image:hover,
+  .create__image:hover,
+  .observe__image:hover,
+  .follow__image:hover {
+    transform: unset;
   }
 
   .container--intro {

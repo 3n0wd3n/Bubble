@@ -239,7 +239,7 @@ export default function Home() {
               <p>Download the app and begin transforming your locations into personal storytelling platforms.</p>
               <div className={styles.download__buttons}>
                 <a href='#' className={`${styles.download__button} ${styles["download__button--filled"]}`}>
-                  <Image src='/apple-image.png' alt='Apple Download Button' width={40} height={40} />
+                  <Image src='/apple-image.png' alt='Apple Download Button' width={33} height={33} />
                   <div className={`${styles["download__button--text"]}`}>
                     <span>Download on the</span>
                     <span>App Store</span>
@@ -258,8 +258,8 @@ export default function Home() {
               <Image
                 src='/qr-image.png'
                 alt='QR image'
-                width={450}
-                height={450}
+                width={250}
+                height={250}
                 style={{ width: "100%", height: "auto" }}
               />
             </div>

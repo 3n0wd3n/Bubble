@@ -703,6 +703,10 @@
     justify-content: center;
   }
 
+  .download__buttons {
+    flex-direction: column;
+  }
+
   .intro__button--filled,
   .intro__button--ghost {
     width: 126px;

@@ -694,16 +694,32 @@
   .nav__buttons,
   .intro__buttons,
   .download__buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
   }
   
   .about h2,
   .download__content h2 {
     font-size: 36px;
     width: 100%;
+  }
+
+  .faq__row {
+    flex-direction: column;
+  }
+
+  .create__content, .follow__content {
+    flex-direction: column-reverse;
+  }
+
+   .follow__content .follow__image, .follow__content .follow__container {
+    flex: unset;
+  }
+
+  .create__content .create__image, .create__content .create__container {
+    flex: unset;
   }
 
   .create__container h2,
@@ -814,12 +830,12 @@
   }
 
   .footer__bottom {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 20px;
   }
 
   .footer__bottom_legal_container{
-  flex-direction: column;
+  flex-direction: column-reverse;
   }
 
   .footer__bottom_legal {

@@ -697,9 +697,22 @@
     display: flex;
   }
 
+  .nav__buttons,
+  .intro__buttons,
   .download__buttons {
-    flex-direction: column;
+    justify-content: center;
   }
+
+  .intro__button--filled,
+  .intro__button--ghost {
+    width: 126px;
+    text-align: center;
+  }
+
+  .intro__button--ghost {
+    box-shadow: 0px 2px 2px rgb(216, 216, 216);
+  }
+
   .intro__image:hover,
   .create__image:hover,
   .observe__image:hover,

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,22 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleResize = () => {
+      if (window.innerWidth < 1080) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={styles.page}>
       {/* general container */}
@@ -100,7 +117,7 @@ export default function Home() {
                   Get the app
                 </a>
                 <a href='#' className={`${styles.intro__button} ${styles["intro__button--ghost"]}`}>
-                  Advertise on Bubble
+                  <p>{isMobile ? "Advertise" : "Advertise on Bubble"}</p>
                 </a>
               </div>
             </div>

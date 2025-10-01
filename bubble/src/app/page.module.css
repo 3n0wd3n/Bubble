@@ -673,6 +673,7 @@
 
   .about__container {
     gap: 32px;
+    flex-direction: column;
   }
 
   .container--create,
@@ -733,6 +734,7 @@
 
   .get_start__card_container {
     gap: 32px;
+    flex-direction: column;
   }
 
   .get_start__card_content h3 {
@@ -742,6 +744,11 @@
   .contact_section {
     gap: 40px;
     padding: 56px 32px;
+    flex-direction: column;
+  }
+
+  .contact__info {
+    width: 100%
   }
 
   .container--footer {
@@ -794,5 +801,20 @@
 
   .nav__toggle {
     display: flex;
+  }
+
+  .footer__nav_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__bottom_legal_container {
+    flex-direction: column;
+    gap: 12px;
   }
 }

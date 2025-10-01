@@ -58,15 +58,17 @@ export default function Home() {
               </button>
               {/* links */}
               <ul className={`${styles.nav__list} ${isOpen ? styles["nav__list--open"] : ""}`}>
-                <button
-                  className={styles.nav__toggle}
-                  onClick={() => setIsOpen(!isOpen)}
-                  aria-label='Toggle navigation'
-                >
-                  <span />
-                  <span />
-                  <span />
-                </button>
+                <div className={styles.nav__toggle_container}>
+                  <button
+                    className={styles.nav__toggle}
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label='Toggle navigation'
+                  >
+                    <span />
+                    <span />
+                    <span />
+                  </button>
+                </div>
                 <li className={styles.nav__item}>
                   <a href='#'>Really? Another Social App</a>
                 </li>

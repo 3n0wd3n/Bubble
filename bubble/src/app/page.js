@@ -76,16 +76,16 @@ export default function Home() {
                     <span />
                   </button>
                 </div>
-                <li className={styles.nav__item}>
+                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
                   <a href='#about'>Really? Another Social App</a>
                 </li>
-                <li className={styles.nav__item}>
+                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
                   <a href='#master'>How To Master Bubble</a>
                 </li>
-                <li className={styles.nav__item}>
+                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
                   <a href='#faq'>F&Q</a>
                 </li>
-                <li className={styles.nav__item}>
+                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
                   <a href='#partners'>Partners</a>
                 </li>
                 {/* hamburger */}

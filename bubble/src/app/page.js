@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import UsageSection from "@/components/usageSection";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -295,6 +296,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* usage - observe photos of others */}
         <section className={styles.observe_section}>
           {/* general container */}
@@ -354,6 +356,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* usage - share, follow, explore */}
         <section className={styles.follow_section}>
           {/* general container */}
@@ -414,6 +417,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* download app with qr */}
         <section className={styles.download_section}>
           {/* general container */}
@@ -475,6 +479,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+
         {/* f&q */}
         <section className={styles.faq_section}>
           <div className={styles.faq__heading}>
@@ -562,6 +567,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+
         {/* get started */}
         <section className={styles.get_start_section}>
           <motion.h2
@@ -626,6 +632,7 @@ export default function Home() {
             </motion.article>
           </div>
         </section>
+
         {/* contact us */}
         <section className={styles.contact_section}>
           <motion.header
@@ -689,6 +696,7 @@ export default function Home() {
           </address>
         </section>
       </main>
+
       {/* footer */}
       <footer className={styles.footer}>
         {/* general container */}

@@ -77,16 +77,16 @@ export default function Home() {
                   </button>
                 </div>
                 <li className={styles.nav__item}>
-                  <a href='#'>Really? Another Social App</a>
+                  <a href='#about'>Really? Another Social App</a>
                 </li>
                 <li className={styles.nav__item}>
-                  <a href='#'>How To Master Bubble</a>
+                  <a href='#master'>How To Master Bubble</a>
                 </li>
                 <li className={styles.nav__item}>
-                  <a href='#'>F&Q</a>
+                  <a href='#faq'>F&Q</a>
                 </li>
                 <li className={styles.nav__item}>
-                  <a href='#'>Partners</a>
+                  <a href='#partners'>Partners</a>
                 </li>
                 {/* hamburger */}
               </ul>
@@ -96,7 +96,7 @@ export default function Home() {
               <a href='#' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
                 Advertise on Bubble
               </a>
-              <a href='#' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>
+              <a href='#app' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>
                 Get the app
               </a>
             </div>
@@ -141,7 +141,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
               >
-                <a href='#' className={`${styles.intro__button} ${styles["intro__button--filled"]}`}>
+                <a href='#app' className={`${styles.intro__button} ${styles["intro__button--filled"]}`}>
                   Get the app
                 </a>
                 <a href='#' className={`${styles.intro__button} ${styles["intro__button--ghost"]}`}>
@@ -167,7 +167,7 @@ export default function Home() {
           </div>
         </section>
         {/* about - why would they need us */}
-        <section className={styles.about}>
+        <section id='about' className={styles.about}>
           {/* general container */}
           <div className={`${styles["container--about"]}`}>
             <motion.h2
@@ -238,7 +238,7 @@ export default function Home() {
           </div>
         </section>
         {/* usage - create bubble */}
-        <section className={styles.create_section}>
+        <section id='master' className={styles.create_section}>
           {/* general container */}
           <div className={`${styles["container--create"]}`}>
             <motion.span
@@ -470,6 +470,7 @@ export default function Home() {
               viewport={{ once: true, amount: 0.3 }}
             >
               <Image
+                id='app'
                 src='/qr-image.png'
                 alt='QR image'
                 width={250}
@@ -481,7 +482,7 @@ export default function Home() {
         </section>
 
         {/* f&q */}
-        <section className={styles.faq_section}>
+        <section id='faq' className={styles.faq_section}>
           <div className={styles.faq__heading}>
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -569,7 +570,7 @@ export default function Home() {
         </section>
 
         {/* get started */}
-        <section className={styles.get_start_section}>
+        <section id='partners' className={styles.get_start_section}>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -1,4 +1,4 @@
-// TODO: create router for more pages, add gifs with animations instead of just photos, create animation when scrolling
+// TODO: create router for more pages, add gifs with animations instead of just photos
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,7 +47,7 @@ export default function Home() {
           {/* navigation */}
           <motion.nav
             className={`${styles.nav} ${scrolled ? styles["nav--scrolled"] : ""}`}
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
@@ -150,9 +150,9 @@ export default function Home() {
             </div>
             <motion.div
               className={styles.intro__image}
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
             >
               <Image
@@ -242,7 +242,7 @@ export default function Home() {
           <div className={`${styles["container--create"]}`}>
             <motion.span
               className={styles.tagline}
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -252,7 +252,7 @@ export default function Home() {
             <div className={styles.create__content}>
               <motion.div
                 className={styles.create__image}
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -301,7 +301,7 @@ export default function Home() {
           <div className={`${styles["container--observe"]}`}>
             <motion.span
               className={styles.tagline}
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -338,7 +338,7 @@ export default function Home() {
               </div>
               <motion.div
                 className={styles.observe__image}
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -360,7 +360,7 @@ export default function Home() {
           <div className={`${styles["container--follow"]}`}>
             <motion.span
               className={styles.tagline}
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -371,7 +371,7 @@ export default function Home() {
             <div className={styles.follow__content}>
               <motion.div
                 className={styles.follow__image}
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true, amount: 0.3 }}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,12 @@ export default function Home() {
         {/* header */}
         <header className={styles.header}>
           {/* navigation */}
-          <nav className={`${styles.nav} ${scrolled ? styles["nav--scrolled"] : ""}`}>
+          <motion.nav
+            className={`${styles.nav} ${scrolled ? styles["nav--scrolled"] : ""}`}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <div className={styles.nav__container}>
               {/* logo */}
               <Link href='#' className='logo'>
@@ -93,7 +99,7 @@ export default function Home() {
                 Get the app
               </a>
             </div>
-          </nav>
+          </motion.nav>
         </header>
       </div>
       {/* main */}
@@ -104,26 +110,51 @@ export default function Home() {
           <div className={`${styles["container--intro"]}`}>
             <div className={styles.intro__content}>
               <div className={styles.intro__heading_container}>
-                <span>Bubble.</span>
-                <h1>
-                  A new <span className={`${styles["outlined-text"]}`}>social network</span> where photos and videos are
-                  tied to real-world places
-                </h1>
+                <motion.span
+                  initial={{ opacity: 0, y: 60 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  Bubble.
+                </motion.span>
+                <motion.h1
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  A new <span className={styles["outlined-text"]}>social network</span> where photos and videos are tied
+                  to real-world places
+                </motion.h1>
               </div>
-              <p>
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
                 Leave photos or videos at real locations and create stories waiting to be discovered. Every place
                 becomes a canvas for your most meaningful moments.
-              </p>
-              <div className={styles.intro__buttons}>
+              </motion.p>
+              <motion.div
+                className={styles.intro__buttons}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+              >
                 <a href='#' className={`${styles.intro__button} ${styles["intro__button--filled"]}`}>
                   Get the app
                 </a>
                 <a href='#' className={`${styles.intro__button} ${styles["intro__button--ghost"]}`}>
                   <p>{isMobile ? "Advertise" : "Advertise on Bubble"}</p>
                 </a>
-              </div>
+              </motion.div>
             </div>
-            <div className={styles.intro__image}>
+            <motion.div
+              className={styles.intro__image}
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Image
                 src='/intro_image.png'
                 alt='Intro image'
@@ -131,16 +162,29 @@ export default function Home() {
                 height={613}
                 style={{ width: "100%", height: "auto" }}
               />
-            </div>
+            </motion.div>
           </div>
         </section>
         {/* about - why would they need us */}
         <section className={styles.about}>
           {/* general container */}
           <div className={`${styles["container--about"]}`}>
-            <h2>Why would you need another social network? </h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              Why would you need another social network?
+            </motion.h2>
             <div className={styles.about__container}>
-              <article className={styles.about__item}>
+              <motion.article
+                className={styles.about__item}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <Image src='/IoShareSocialOutline.svg' alt='Share icon' width={48} height={48} />
                 <div className={styles.item__text_container}>
                   <p>
@@ -149,28 +193,46 @@ export default function Home() {
                   </p>
                   <p>Capture moments exactly where they happen and decide who can unlock them.</p>
                 </div>
-              </article>
-              <article className={styles.about__item}>
+              </motion.article>
+              <motion.article
+                className={styles.about__item}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <Image src='/IoEarthOutline.svg' alt='Share icon' width={48} height={48} />
                 <div className={styles.item__text_container}>
                   <p>Lets you discover hidden stories left by others in real places.</p>
                   <p>Explore memories waiting to be found and uncover stories tied to meaningful locations.</p>
                 </div>
-              </article>
-              <article className={styles.about__item}>
+              </motion.article>
+              <motion.article
+                className={styles.about__item}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <Image src='/IoSparklesOutline.svg' alt='Share icon' width={48} height={48} />
                 <div className={styles.item__text_container}>
                   <p>Brings excitement to your everyday life by exploring memories nearby</p>
                   <p>Leave surprises nearby and explore new spots to turn everyday places into adventures.</p>
                 </div>
-              </article>
-              <article className={styles.about__item}>
+              </motion.article>
+              <motion.article
+                className={styles.about__item}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <Image src='/IoMap.svg' alt='Share icon' width={48} height={48} />
                 <div className={styles.item__text_container}>
                   <p>Transform space around you into unforgettable adventures</p>
                   <p>Create a digital time capsule that connects people through shared experiences and locations.</p>
                 </div>
-              </article>
+              </motion.article>
             </div>
           </div>
         </section>
@@ -178,9 +240,23 @@ export default function Home() {
         <section className={styles.create_section}>
           {/* general container */}
           <div className={`${styles["container--create"]}`}>
-            <span className={styles.tagline}>01 Create memmories</span>
+            <motion.span
+              className={styles.tagline}
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              01 Create memmories
+            </motion.span>
             <div className={styles.create__content}>
-              <div className={styles.create__image}>
+              <motion.div
+                className={styles.create__image}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <Image
                   src='/create-image.png'
                   alt='Create image'
@@ -188,14 +264,33 @@ export default function Home() {
                   height={733}
                   style={{ width: "100%", height: "auto" }}
                 />
-              </div>
+              </motion.div>
               <div className={styles.create__container}>
-                <span>Capture</span>
-                <h2>Leave photos at specific locations</h2>
-                <p>
+                <motion.span
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  Capture
+                </motion.span>
+                <motion.h2
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  Leave photos at specific locations
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   Select a meaningful location, upload your photo or video and select who can see your bubble. Your
                   memory becomes a hidden story waiting to be discovered by others.
-                </p>
+                </motion.p>
               </div>
             </div>
           </div>
@@ -204,17 +299,50 @@ export default function Home() {
         <section className={styles.observe_section}>
           {/* general container */}
           <div className={`${styles["container--observe"]}`}>
-            <span className={styles.tagline}>02 Discover stories</span>
+            <motion.span
+              className={styles.tagline}
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              02 Discover stories
+            </motion.span>
             <div className={styles.observe__content}>
               <div className={styles.observe__container}>
-                <span>Explore</span>
-                <h2>Reveal moments left by others around you.</h2>
-                <p>
+                <motion.span
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  Explore
+                </motion.span>
+                <motion.h2
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  Reveal moments left by others around you.
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   Visit locations and unlock hidden stories left by others. Each place becomes a gateway to unexpected
                   narratives.
-                </p>
+                </motion.p>
               </div>
-              <div className={styles.observe__image}>
+              <motion.div
+                className={styles.observe__image}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <Image
                   src='/observe-image.png'
                   alt='Observe image'
@@ -222,7 +350,7 @@ export default function Home() {
                   height={639}
                   style={{ width: "100%", height: "auto" }}
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -230,9 +358,24 @@ export default function Home() {
         <section className={styles.follow_section}>
           {/* general container */}
           <div className={`${styles["container--follow"]}`}>
-            <span className={styles.tagline}>03 Share experiences</span>
+            <motion.span
+              className={styles.tagline}
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              03 Share experiences
+            </motion.span>
+
             <div className={styles.follow__content}>
-              <div className={styles.follow__image}>
+              <motion.div
+                className={styles.follow__image}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <Image
                   src='/follow-image.png'
                   alt='Follow image'
@@ -240,11 +383,33 @@ export default function Home() {
                   height={625}
                   style={{ width: "100%", height: "auto" }}
                 />
-              </div>
+              </motion.div>
+
               <div className={styles.follow__container}>
-                <span>Connect</span>
-                <h2>Build a global community of storytellers</h2>
-                <p>Interact with memories and create a network of shared experiences across different locations.</p>
+                <motion.span
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  Connect
+                </motion.span>
+                <motion.h2
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  Build a global community of storytellers
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  Interact with memories and create a network of shared experiences across different locations.
+                </motion.p>
               </div>
             </div>
           </div>
@@ -254,9 +419,29 @@ export default function Home() {
           {/* general container */}
           <div className={`${styles["container--download"]}`}>
             <article className={styles.download__content}>
-              <h2>Be the first to turn photos into an experience.</h2>
-              <p>Download the app and begin transforming your locations into personal storytelling platforms.</p>
-              <div className={styles.download__buttons}>
+              <motion.h2
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                Be the first to turn photos into an experience.
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                Download the app and begin transforming your locations into personal storytelling platforms.
+              </motion.p>
+              <motion.div
+                className={styles.download__buttons}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <a href='#' className={`${styles.download__button} ${styles["download__button--filled"]}`}>
                   <Image src='/apple-image.png' alt='Apple Download Button' width={33} height={33} />
                   <div className={`${styles["download__button--text"]}`}>
@@ -271,9 +456,15 @@ export default function Home() {
                     <span>Android</span>
                   </div>
                 </a>
-              </div>
+              </motion.div>
             </article>
-            <div className={styles.qr__image}>
+            <motion.div
+              className={styles.qr__image}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Image
                 src='/qr-image.png'
                 alt='QR image'
@@ -281,17 +472,37 @@ export default function Home() {
                 height={250}
                 style={{ width: "100%", height: "auto" }}
               />
-            </div>
+            </motion.div>
           </div>
         </section>
         {/* f&q */}
         <section className={styles.faq_section}>
           <div className={styles.faq__heading}>
-            <h2>FAQs</h2>
-            <p>Get answers to common questions about our Bubble platform.</p>
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              FAQs
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              Get answers to common questions about our Bubble platform.
+            </motion.p>
           </div>
           <div className={styles.faq__rows_container}>
-            <div className={styles.faq__row}>
+            <motion.div
+              className={styles.faq__row}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <article className={styles.faq__row_item}>
                 <Image src='/IoAddCircleOutline.svg' alt='Share icon' width={48} height={48} />
                 <h5>How do I create a bubble?</h5>
@@ -316,8 +527,14 @@ export default function Home() {
                   details.
                 </p>
               </article>
-            </div>
-            <div className={styles.faq__row}>
+            </motion.div>
+            <motion.div
+              className={styles.faq__row}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <article className={styles.faq__row_item}>
                 <Image src='/apps.svg' alt='Apps icon' width={48} height={48} />
                 <h5>How do I create a bubble?</h5>
@@ -342,14 +559,28 @@ export default function Home() {
                   details.
                 </p>
               </article>
-            </div>
+            </motion.div>
           </div>
         </section>
         {/* get started */}
         <section className={styles.get_start_section}>
-          <h2>Get Started</h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            Get Started
+          </motion.h2>
+
           <div className={styles.get_start__card_container}>
-            <article className={`${styles.get_start__card} ${styles["get_start__card--partner"]}`}>
+            <motion.article
+              className={`${styles.get_start__card} ${styles["get_start__card--partner"]}`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={styles.get_start__card_content}>
                 <h3>Partner with Bubble</h3>
                 <p>
@@ -367,8 +598,14 @@ export default function Home() {
                   className={styles.get_start__link_icon}
                 />
               </a>
-            </article>
-            <article className={`${styles.get_start__card} ${styles["get_start__card--user"]}`}>
+            </motion.article>
+            <motion.article
+              className={`${styles.get_start__card} ${styles["get_start__card--user"]}`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={styles.get_start__card_content}>
                 <h3>Be part of the Bubble</h3>
                 <p>
@@ -386,33 +623,57 @@ export default function Home() {
                   className={styles.get_start__link_icon}
                 />
               </a>
-            </article>
+            </motion.article>
           </div>
         </section>
         {/* contact us */}
         <section className={styles.contact_section}>
-          <header className={styles.contact__header}>
+          <motion.header
+            className={styles.contact__header}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <span className={`${styles.tagline} ${styles["tagline--light"]}`}>Connect</span>
             <h2>Contact us</h2>
             <p>We’re here to help you start your bubble-sharing journey and answer any questions.</p>
-          </header>
+          </motion.header>
 
           <address className={styles.contact__info}>
-            <div className={styles.contact__info_item}>
+            <motion.div
+              className={styles.contact__info_item}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Image src='/mail.svg' alt='SVG Arrow' width={24} height={24} className={styles.get_start__link_icon} />
               <p className={styles.contact__item_content}>
                 <strong>Email:</strong>
                 <a href='mailto:support@memoriesapp.com'>support@bubble.com</a>
               </p>
-            </div>
-            <div className={styles.contact__info_item}>
+            </motion.div>
+            <motion.div
+              className={styles.contact__info_item}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Image src='/call.svg' alt='SVG Arrow' width={24} height={24} className={styles.get_start__link_icon} />
               <p className={styles.contact__item_content}>
                 <strong>Phone:</strong>
                 <a href='tel:+61281234567'>+61 2 8123 4567</a>
               </p>
-            </div>
-            <div className={styles.contact__info_item}>
+            </motion.div>
+            <motion.div
+              className={styles.contact__info_item}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Image
                 src='/location_on.svg'
                 alt='SVG Arrow'
@@ -424,7 +685,7 @@ export default function Home() {
                 <strong>Office:</strong>
                 Level 5, 123 Digital Lane, Sydney NSW 2000, Australia
               </p>
-            </div>
+            </motion.div>
           </address>
         </section>
       </main>
@@ -432,7 +693,13 @@ export default function Home() {
       <footer className={styles.footer}>
         {/* general container */}
         <div className={`${styles["container--footer"]}`}>
-          <div className={styles.footer__nav_container}>
+          <motion.div
+            className={styles.footer__nav_container}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <nav className={styles.footer__nav}>
               {/* logo */}
               <Link href='#' className='logo'>
@@ -522,9 +789,14 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className={styles.footer__bottom}>
+          </motion.div>
+          <motion.div
+            className={styles.footer__bottom}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className={styles.footer__bottom_legal_container}>
               <p>© 2025 Bubble App. All rights reserved.</p>
               <ul className={styles.footer__bottom_legal}>
@@ -562,7 +834,7 @@ export default function Home() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </footer>
     </div>

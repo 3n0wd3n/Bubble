@@ -30,7 +30,7 @@ export default function Home() {
       setIsMobile(window.innerWidth < 1080);
     };
 
-    handleResize(); // ⬅️ nastavíme hned při prvním renderu
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -90,7 +90,14 @@ export default function Home() {
                 <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
                   <a href='#partners'>Partners</a>
                 </li>
-                {/* hamburger */}
+                <div className={`${styles.nav__buttons} ${isOpen ? styles["nav__buttons--open"] : ""}`}>
+                  <a href='#' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
+                    Advertise on Bubble
+                  </a>
+                  <a href='#app' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>
+                    Get the app
+                  </a>
+                </div>
               </ul>
             </div>
             {/* buttons */}

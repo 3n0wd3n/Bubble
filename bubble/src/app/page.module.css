@@ -74,6 +74,14 @@
   color: var(--secondary);
 }
 
+.nav__logo_mobile {
+  display: none;
+}
+
+.nav__buttons_mobile {
+  display: none;
+}
+
 .nav__item::after {
   content: "";
   position: absolute;
@@ -676,9 +684,17 @@
     display: none;
   }
 
+  .nav__logo_mobile {
+    display: flex;
+  }
+
   .nav__buttons--open {
     display: flex;
     flex-direction: column;
+    display: flex;
+
+    gap: 16px;
+    align-items: center;
   }
 
   .nav__button {

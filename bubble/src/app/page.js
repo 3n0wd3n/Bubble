@@ -65,7 +65,7 @@ export default function Home() {
               <ul className={`${styles.nav__list} ${isOpen ? styles["nav__list--open"] : ""}`}>
                 <div className={styles.nav__toggle_container}>
                   {/* logo */}
-                  <Link href='#' className='logo'>
+                  <Link href='#' className={styles.nav__logo_mobile}>
                     <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
                   </Link>
                   <button
@@ -90,7 +90,7 @@ export default function Home() {
                 <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
                   <a href='#partners'>Partners</a>
                 </li>
-                <div className={`${styles.nav__buttons} ${isOpen ? styles["nav__buttons--open"] : ""}`}>
+                <div className={`${styles.nav__buttons_mobile} ${isOpen ? styles["nav__buttons--open"] : ""}`}>
                   <a href='#' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
                     Advertise on Bubble
                   </a>

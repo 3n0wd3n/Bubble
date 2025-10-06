@@ -1,4 +1,3 @@
-// TODO: create router for more pages, add gifs with animations instead of just photos
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +9,7 @@ import UsageSection from "@/components/usageSection";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,16 +27,15 @@ export default function Home() {
     if (typeof window === "undefined") return;
 
     const handleResize = () => {
-      if (window.innerWidth < 1080) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
+      setIsMobile(window.innerWidth < 1080);
     };
 
+    handleResize(); // ⬅️ nastavíme hned při prvním renderu
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  if (isMobile === null) return null;
 
   return (
     <div className={styles.page}>
@@ -48,9 +46,9 @@ export default function Home() {
           {/* navigation */}
           <motion.nav
             className={`${styles.nav} ${scrolled ? styles["nav--scrolled"] : ""}`}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={!isMobile ? { opacity: 0, y: 40 } : false}
+            animate={!isMobile ? { opacity: 1, y: 0 } : false}
+            transition={!isMobile ? { duration: 0.6, delay: 0.4 } : {}}
           >
             <div className={styles.nav__container}>
               {/* logo */}
@@ -66,6 +64,10 @@ export default function Home() {
               {/* links */}
               <ul className={`${styles.nav__list} ${isOpen ? styles["nav__list--open"] : ""}`}>
                 <div className={styles.nav__toggle_container}>
+                  {/* logo */}
+                  <Link href='#' className='logo'>
+                    <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
+                  </Link>
                   <button
                     className={styles.nav__toggle}
                     onClick={() => setIsOpen(!isOpen)}

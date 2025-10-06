@@ -692,6 +692,7 @@
 
   .nav__list--open {
     display: flex;
+    padding: 16px;
   }
 
   .nav__toggle {

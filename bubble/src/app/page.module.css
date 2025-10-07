@@ -189,6 +189,12 @@
   font-size: 18px;
 }
 
+.create_section .section_tag,
+.observe_section .section_tag,
+.follow_section .section_tag {
+  font-weight: 600;
+}
+
 .create__content,
 .observe__content,
 .follow__content {
@@ -562,12 +568,6 @@
   .observe_section .tagline,
   .follow_section .tagline {
     font-size: 16px;
-  }
-
-  .create_section .section_tag,
-  .observe_section .section_tag,
-  .follow_section .section_tag {
-    font-weight: 600;
   }
 
   .create__content .create__image,

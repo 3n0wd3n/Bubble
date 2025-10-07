@@ -2,8 +2,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import styles from "./usageSection.module.css";
-import styles from "../app/page.module.css";
+import styles from "../../components/UsageSections/usageSection.module.css";
 
 export default function UsageSection({ number, tagline, title, subtitle, text, image, reverse = false, sectionClass }) {
   return (

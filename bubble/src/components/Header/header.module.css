@@ -1,0 +1,201 @@
+.container--header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 64px 0 64px;
+  z-index: 1000;
+}
+
+.header {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--secondary);
+  border-radius: 2px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.nav__logo_mobile {
+  display: none;
+}
+
+.nav__item {
+  position: relative;
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.nav__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: width 0.5s ease;
+}
+
+.nav__item:hover::after {
+  width: 100%;
+}
+
+.nav__buttons_mobile {
+  display: none;
+}
+
+.nav__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav__button {
+  padding: 8px 20px;
+  border-radius: var(--border-radius-btn-primary);
+}
+
+.nav__button--filled {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition: 0.3s ease;
+}
+
+.nav__button--filled:hover {
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+.nav__button--ghost {
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  transition: opacity 0.3s ease;
+}
+
+.nav__button--ghost:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1080px) {
+  .container--header {
+    padding: 32px 32px 56px 32px;
+  }
+
+  .nav {
+    top: 0;
+    left: 0;
+    padding: 32px;
+    flex-direction: row;
+    position: fixed;
+    background-color: var(--primary);
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .nav--scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+  }
+
+  .nav__container {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav__buttons {
+    display: none;
+  }
+
+  .nav__logo_mobile {
+    display: flex;
+  }
+
+  .nav__buttons--open {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+
+    gap: 16px;
+    align-items: center;
+  }
+
+  .nav__button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__button--ghost {
+    box-shadow: 0px 2px 2px rgb(216, 216, 216);
+  }
+
+  .nav__list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary);
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    z-index: 1000;
+    box-shadow: 0px 4px 12px rgb(216, 216, 216);
+  }
+
+  .nav__list--open {
+    display: flex;
+    padding: 16px;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__toggle_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__buttons {
+    justify-content: center;
+  }
+}

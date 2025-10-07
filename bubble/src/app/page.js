@@ -639,6 +639,7 @@ export default function Home() {
           </address>
         </section>
       </main>
+      {/* footer */}
       <Footer />
     </div>
   );

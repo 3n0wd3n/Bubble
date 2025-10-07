@@ -269,7 +269,7 @@
   flex-direction: column;
   flex: 1 1 400px;
   justify-content: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .intro__image,
@@ -326,7 +326,7 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 .qr__image {
@@ -504,7 +504,7 @@
 .contact__header {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   width: 100%;
 }
 
@@ -615,6 +615,7 @@
   border-radius: 6px;
   color: white;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .footer__form_submit:active {
@@ -765,23 +766,27 @@
   }
 
   .container--intro {
-    gap: 40px;
+    gap: 48px;
     padding-top: 40px;
     padding-bottom: 56px;
     padding-left: 32px;
     padding-right: 32px;
   }
 
+  .intro__heading_container h1 {
+    font-size: 40px;
+  }
+
+  .intro__content {
+    gap: 24px;
+  }
+
   .container--header {
     padding: 32px 32px 56px 32px;
   }
 
-  .intro__content {
-    gap: 32px;
-  }
-
   .container--about {
-    gap: 40px;
+    gap: 48px;
     padding: 56px 32px;
   }
 
@@ -790,29 +795,25 @@
     flex-direction: column;
   }
 
-  .container--create,
-  .container--observe,
-  .container--follow {
-    padding: 56px 32px;
-    gap: 48px;
-  }
-
-  .page {
-    gap: 0px;
-  }
-
-  .intro__heading_container h1 {
-    font-size: 48px;
-  }
-
   .about h2,
   .download__content h2 {
     font-size: 36px;
     width: 100%;
   }
 
-  .faq__row {
-    flex-direction: column;
+  .about__item {
+    gap: 20px;
+  }
+
+  .container--create,
+  .container--observe,
+  .container--follow {
+    padding: 56px 32px;
+    gap: 32px;
+  }
+
+  .page {
+    gap: 0px;
   }
 
   .create__content,
@@ -825,9 +826,25 @@
     flex: unset;
   }
 
+  .create_section .tagline,
+  .observe_section .tagline,
+  .follow_section .tagline {
+    font-size: 16px;
+  }
+
+  .create_section .section_tag,
+  .observe_section .section_tag,
+  .follow_section .section_tag {
+    font-weight: 600;
+  }
+
   .create__content .create__image,
   .create__content .create__container {
     flex: unset;
+  }
+
+  .faq__heading {
+    gap: 20px;
   }
 
   .create__container h2,
@@ -840,20 +857,28 @@
     font-size: 36px;
   }
 
+  .faq__row {
+    flex-direction: column;
+  }
+
+  .faq__heading p {
+    text-align: center;
+  }
+
   .create__content,
   .observe__content,
   .follow__content {
-    gap: 40px;
+    gap: 48px;
   }
 
   .container--download {
-    gap: 40px;
+    gap: 48px;
     padding: 56px 32px;
   }
 
   .faq_section,
   .get_start_section {
-    gap: 40px;
+    gap: 48px;
     padding: 56px 32px;
   }
 
@@ -867,9 +892,13 @@
   }
 
   .contact_section {
-    gap: 40px;
+    gap: 48px;
     padding: 56px 32px;
     flex-direction: column;
+  }
+
+  .contact__header {
+    gap: 20px;
   }
 
   .contact__info {

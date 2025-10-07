@@ -277,6 +277,7 @@ export default function Home() {
               </motion.div>
               <div className={styles.create__container}>
                 <motion.span
+                  className={styles.section_tag}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -322,6 +323,7 @@ export default function Home() {
             <div className={styles.observe__content}>
               <div className={styles.observe__container}>
                 <motion.span
+                  className={styles.section_tag}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -399,6 +401,7 @@ export default function Home() {
 
               <div className={styles.follow__container}>
                 <motion.span
+                  className={styles.section_tag}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}

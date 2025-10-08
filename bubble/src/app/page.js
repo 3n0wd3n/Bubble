@@ -187,7 +187,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              01 Create memmories
+              01 Create memories
             </motion.span>
             <div className={styles.create__content}>
               <motion.div
@@ -461,19 +461,13 @@ export default function Home() {
               </article>
               <article className={styles.faq__row_item}>
                 <Image src='/enhanced_encryption.svg' alt='Share icon' width={48} height={48} />
-                <h5>How do I create a bubble?</h5>
-                <p>
-                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
-                  details.
-                </p>
+                <h5>Is my data secure?</h5>
+                <p>We use advanced encryption to protect your personal bubbles.</p>
               </article>
               <article className={styles.faq__row_item}>
                 <Image src='/share_location.svg' alt='Location icon' width={48} height={48} />
-                <h5>How do I create a bubble?</h5>
-                <p>
-                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
-                  details.
-                </p>
+                <h5>Can I share bubbles privately?</h5>
+                <p>Yes, you can control who sees your location-based selecting right people.</p>
               </article>
             </motion.div>
             <motion.div
@@ -485,27 +479,18 @@ export default function Home() {
             >
               <article className={styles.faq__row_item}>
                 <Image src='/apps.svg' alt='Apps icon' width={48} height={48} />
-                <h5>How do I create a bubble?</h5>
-                <p>
-                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
-                  details.
-                </p>
+                <h5>Is the app free?</h5>
+                <p>Basic features are free, with premium options available.</p>
               </article>
               <article className={styles.faq__row_item}>
                 <Image src='/IoInfiniteOutline.svg' alt='Infinite icon' width={48} height={48} />
-                <h5>How do I create a bubble?</h5>
-                <p>
-                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
-                  details.
-                </p>
+                <h5>How many bubbles can I create?</h5>
+                <p>Unlimited memories with our standard and premium plans.</p>
               </article>
               <article className={styles.faq__row_item}>
                 <Image src='/android.svg' alt='Android icon' width={48} height={48} />
-                <h5>How do I create a bubble?</h5>
-                <p>
-                  Select a location from your trips or be in the spot, upload a photo or video, and add your story
-                  details.
-                </p>
+                <h5>Works on which devices?</h5>
+                <p>Available on iOS and Android mobile devices.</p>
               </article>
             </motion.div>
           </div>

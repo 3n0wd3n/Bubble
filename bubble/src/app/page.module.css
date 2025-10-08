@@ -368,6 +368,7 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  flex: 1;
 }
 
 .faq__row_item h5 {

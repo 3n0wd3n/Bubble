@@ -42,14 +42,6 @@
 .observe__image,
 .follow__image {
   flex: 1 1 400px;
-  /* cursor: pointer; */
-  transition: transform 0.3s ease;
-}
-
-.create__image:hover,
-.observe__image:hover,
-.follow__image:hover {
-  transform: scale(1.05);
 }
 
 .create__image,

@@ -20,9 +20,16 @@ export default function getStarted() {
           <motion.article
             className={`${styles.get_start__card} ${styles["get_start__card--partner"]}`}
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, delay: 0.6 },
+            }}
             viewport={{ once: true, amount: 0.3 }}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
           >
             <div className={styles.get_start__card_content}>
               <h3>Partner with Bubble</h3>
@@ -45,9 +52,16 @@ export default function getStarted() {
           <motion.article
             className={`${styles.get_start__card} ${styles["get_start__card--user"]}`}
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, delay: 0.6 },
+            }}
             viewport={{ once: true, amount: 0.3 }}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
           >
             <div className={styles.get_start__card_content}>
               <h3>Be part of the Bubble</h3>

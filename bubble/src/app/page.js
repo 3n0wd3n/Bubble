@@ -171,7 +171,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* usage - observe photos of others */}
         <section className={styles.observe_section}>
           {/* general container */}
@@ -232,7 +231,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* usage - share, follow, explore */}
         <section className={styles.follow_section}>
           {/* general container */}
@@ -246,7 +244,6 @@ export default function Home() {
             >
               03 Share experiences
             </motion.span>
-
             <div className={styles.follow__content}>
               <motion.div
                 className={styles.follow__image}
@@ -263,7 +260,6 @@ export default function Home() {
                   style={{ width: "100%", height: "auto" }}
                 />
               </motion.div>
-
               <div className={styles.follow__container}>
                 <motion.span
                   className={styles.section_tag}
@@ -294,16 +290,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* download app with qr */}
         <DownloadApp />
-
         {/* f&q */}
         <FAQ />
-
         {/* get started */}
         <GetStart />
-
         {/* contact us */}
         <section className={styles.contact_section}>
           <motion.header
@@ -317,7 +309,6 @@ export default function Home() {
             <h2>Contact us</h2>
             <p>We’re here to help you start your bubble-sharing journey and answer any questions.</p>
           </motion.header>
-
           <address className={styles.contact__info}>
             <motion.div
               className={styles.contact__info_item}

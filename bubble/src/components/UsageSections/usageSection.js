@@ -17,7 +17,6 @@ export default function UsageSection({ number, tagline, title, subtitle, text, i
         >
           {number} {tagline}
         </motion.span>
-
         <div className={`${styles.content} ${reverse ? styles.reverse : ""}`}>
           <div className={styles.text}>
             <motion.span
@@ -28,7 +27,6 @@ export default function UsageSection({ number, tagline, title, subtitle, text, i
             >
               {subtitle}
             </motion.span>
-
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +35,6 @@ export default function UsageSection({ number, tagline, title, subtitle, text, i
             >
               {title}
             </motion.h2>
-
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +44,6 @@ export default function UsageSection({ number, tagline, title, subtitle, text, i
               {text}
             </motion.p>
           </div>
-
           <motion.div
             className={styles.image}
             initial={{ opacity: 0, y: 40 }}

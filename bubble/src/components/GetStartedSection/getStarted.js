@@ -16,7 +16,6 @@ export default function getStarted() {
         >
           Get Started
         </motion.h2>
-
         <div className={styles.get_start__card_container}>
           <motion.article
             className={`${styles.get_start__card} ${styles["get_start__card--partner"]}`}

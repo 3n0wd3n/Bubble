@@ -100,15 +100,6 @@
   flex: 1 1 400px;
 }
 
-.intro__image {
-  /* cursor: pointer; */
-  transition: transform 0.3s ease;
-}
-
-.intro__image:hover {
-  transform: scale(1.05);
-}
-
 @media (max-width: 1080px) {
   .container--intro {
     gap: 48px;

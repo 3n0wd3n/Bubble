@@ -96,9 +96,29 @@
   opacity: 0.8;
 }
 
-.intro__image {
+/* IMAGE */
+
+/* first version of animation */
+.intro__imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 619px;
+  aspect-ratio: 619 / 613;
+  overflow: hidden;
   flex: 1 1 400px;
 }
+
+.intro__imageLayer {
+  position: absolute;
+  inset: 0;
+}
+
+/* second version of animation */
+/* .intro__image {
+  flex: 1 1 400px;
+} */
+
+/* IMAGE */
 
 @media (max-width: 1080px) {
   .container--intro {

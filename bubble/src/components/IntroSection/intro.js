@@ -57,7 +57,36 @@ export default function Intro({ isMobile }) {
             </a>
           </motion.div>
         </div>
-        <motion.div
+        {/* first version of animation */}
+        <div className={styles.intro__imageWrapper}>
+          <motion.div
+            className={styles.intro__imageLayer}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <Image src='/intro-first-half.png' alt='Intro first half' fill style={{ objectFit: "contain" }} />
+          </motion.div>
+          <motion.div
+            className={styles.intro__imageLayer}
+            initial={{ opacity: 0, y: 40 }}
+            animate={startFloating ? { opacity: 1, y: [0, -6] } : { opacity: 1, y: 0 }}
+            transition={
+              startFloating
+                ? {
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    ease: "easeInOut",
+                  }
+                : { duration: 0.8, delay: 0.2 }
+            }
+          >
+            <Image src='/intro-second-half.png' alt='Intro second half' fill style={{ objectFit: "contain" }} />
+          </motion.div>
+        </div>
+        {/* second version of animation */}
+        {/* <motion.div
           className={styles.intro__image}
           initial={{ opacity: 0, y: 40 }}
           animate={
@@ -86,7 +115,7 @@ export default function Intro({ isMobile }) {
             height={613}
             style={{ width: "100%", height: "auto" }}
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

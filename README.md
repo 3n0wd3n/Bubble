@@ -15,6 +15,7 @@ Technical decision that need to be considered regards to animation
 - Discuss with Dominik if he likes more aligned icons and text in the "Why would you need another social network" section
 - Discuss with Dominik which pages we should prepare (FAQs, Money Plan, Page for advertisers)
 - Link our app to socials
+- Add anchor after scrolled through 40% of the page
 
 ## General setup for new component
 

@@ -15,8 +15,7 @@
   width: 100%;
 }
 
-.intro__buttons,
-.download__buttons {
+.intro__buttons {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -129,12 +128,6 @@
   max-width: 600px;
 }
 
-.download__content h2 {
-  font-size: 48px;
-  width: 768px;
-  text-align: center;
-}
-
 .item__text_container p:first-of-type {
   font-weight: 600;
 }
@@ -205,7 +198,6 @@
 .create__container h2,
 .observe__container h2,
 .follow__container h2,
-.download__content h2,
 .faq__heading h2,
 .get_start_section h2,
 .contact__header h2 {
@@ -220,78 +212,9 @@
   background-color: var(--background-sections-lightgray);
 }
 
-.download_section {
-  color: var(--primary);
-  padding: 56px 64px;
-}
-
-.container--download {
-  background-color: var(--secondary);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1312px;
-  margin: 0 auto;
-  padding: 56px 64px;
-  gap: 80px;
-  border-radius: 40px;
-}
-
-.download__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.qr__image {
-  max-width: 250px;
-  width: 100%;
-}
-
 .intro__button {
   padding: 8px 20px;
   border-radius: var(--border-radius-btn-primary);
-}
-.download__button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px 16px;
-  border-radius: 10px;
-  gap: 8px;
-}
-
-.download__button--filled {
-  background-color: var(--secondary);
-  color: var(--primary);
-  border: 1px solid var(--primary);
-}
-
-.download__button--ghost {
-  background-color: var(--primary);
-  color: var(--secondary);
-  border: 1px solid var(--primary);
-}
-
-.download__button--text {
-  display: flex;
-  flex-direction: column;
-}
-
-.download__button--text span:nth-child(2) {
-  font-weight: 600;
-}
-
-.download__button {
-  transition: 0.3s ease;
-}
-
-.download__button:hover {
-  opacity: 0.9;
 }
 
 .faq_section,
@@ -459,21 +382,8 @@
 }
 
 @media (max-width: 1080px) {
-  .intro__buttons,
-  .download__buttons {
+  .intro__buttons {
     justify-content: center;
-  }
-
-  .download__buttons {
-    flex-direction: column;
-  }
-
-  .download_section {
-    padding: 56px 32px;
-  }
-
-  .container--download {
-    border-radius: 20px;
   }
 
   .intro__button--filled,
@@ -507,11 +417,6 @@
 
   .intro__content {
     gap: 24px;
-  }
-
-  .download__content h2 {
-    font-size: 36px;
-    width: 100%;
   }
 
   .container--create,
@@ -553,7 +458,6 @@
   .create__container h2,
   .observe__container h2,
   .follow__container h2,
-  .download__content h2,
   .faq__heading h2,
   .get_start_section h2,
   .contact__header h2 {
@@ -572,11 +476,6 @@
   .observe__content,
   .follow__content {
     gap: 48px;
-  }
-
-  .container--download {
-    gap: 48px;
-    padding: 32px;
   }
 
   .faq_section,

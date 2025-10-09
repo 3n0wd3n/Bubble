@@ -2,7 +2,9 @@
 
 Presentational web for new social network app
 
-## Discussion
+## Technical
+
+Technical decision that need to be considered regards to animation
 
     viewport={{ once: true, amount: 0.3 }} -> viewport={{ false: true, amount: 0.3 }}
 
@@ -15,3 +17,17 @@ Presentational web for new social network app
 - Link our app to socials
 - Try different look for "Download section"
 - Make components from "Usage Section"
+
+## General setup for new component
+
+    "use client";
+    import Image from "next/image";
+    import Link from "next/link";
+    import styles from "./[NAME].module.css";
+    import { motion } from "framer-motion";
+
+    export default function [NAME]({ [PARAMS] }) {
+        return (
+            <></>
+        )
+    }

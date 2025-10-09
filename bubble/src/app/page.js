@@ -46,26 +46,16 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      {/* header */}
       <Header scrolled={scrolled} setScrolled={setScrolled} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
-      {/* main */}
       <main className={styles.main}>
-        {/* intro */}
         <Intro isMobile={isMobile} />
-        {/* about - why would they need us */}
         <AnotherSN />
-        {/* usage section */}
         <UsageSection />
-        {/* download app with qr */}
         <DownloadApp />
-        {/* f&q */}
         <FAQ />
-        {/* get started */}
         <GetStart />
-        {/* contact us */}
         <Contact />
       </main>
-      {/* footer */}
       <Footer />
     </div>
   );

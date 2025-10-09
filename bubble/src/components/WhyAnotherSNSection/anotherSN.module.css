@@ -38,6 +38,10 @@
   gap: 16px;
 }
 
+.item__text_container p:first-of-type {
+  font-weight: 600;
+}
+
 @media (max-width: 1080px) {
   .container--about {
     gap: 48px;

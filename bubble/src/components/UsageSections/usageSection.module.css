@@ -1,0 +1,143 @@
+.create_section {
+  background-color: var(--background-sections-lightgray);
+}
+
+.observe_section {
+  background-color: var(--background-sections-darkgray);
+}
+
+.follow_section {
+  background-color: var(--background-sections-lightgray);
+}
+
+.container--create,
+.container--observe,
+.container--follow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 56px 64px;
+  gap: 48px;
+}
+
+.create_section .tagline,
+.observe_section .tagline,
+.follow_section .tagline {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.create__content,
+.observe__content,
+.follow__content {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.create__image,
+.observe__image,
+.follow__image {
+  flex: 1 1 400px;
+  /* cursor: pointer; */
+  transition: transform 0.3s ease;
+}
+
+.create__image:hover,
+.observe__image:hover,
+.follow__image:hover {
+  transform: scale(1.05);
+}
+
+.create__image,
+.follow__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.create__container,
+.observe__container,
+.follow__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 400px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.create_section .section_tag,
+.observe_section .section_tag,
+.follow_section .section_tag {
+  font-weight: 600;
+}
+
+.create__container h2,
+.observe__container h2,
+.follow__container h2 {
+  font-size: 48px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+}
+
+/* When dark scheme */
+@media (prefers-color-scheme: dark) {
+}
+
+@media (max-width: 1080px) {
+  .page {
+    gap: 0px;
+  }
+
+  .container--create,
+  .container--observe,
+  .container--follow {
+    padding: 56px 32px;
+    gap: 32px;
+  }
+
+  .create_section .tagline,
+  .observe_section .tagline,
+  .follow_section .tagline {
+    font-size: 16px;
+  }
+
+  .create__content,
+  .observe__content,
+  .follow__content {
+    gap: 48px;
+  }
+
+  .create__content,
+  .follow__content {
+    flex-direction: column-reverse;
+  }
+
+  .follow__content .follow__image,
+  .follow__content .follow__container {
+    flex: unset;
+  }
+
+  .create__content .create__image,
+  .create__content .create__container {
+    flex: unset;
+  }
+
+  .create__image:hover,
+  .observe__image:hover,
+  .follow__image:hover {
+    transform: unset;
+  }
+
+  .create__container h2,
+  .observe__container h2,
+  .follow__container h2 {
+    font-size: 36px;
+  }
+}

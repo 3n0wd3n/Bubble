@@ -59,7 +59,7 @@ export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrol
                   <a href='#partners'>Partners</a>
                 </li>
                 <div className={`${styles.nav__buttons_mobile} ${isOpen ? styles["nav__buttons--open"] : ""}`}>
-                  <a href='#' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
+                  <a href='/partners' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
                     Advertise on Bubble
                   </a>
                   <a href='#app' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>
@@ -70,7 +70,7 @@ export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrol
             </div>
             {/* buttons */}
             <div className={styles.nav__buttons}>
-              <a href='#' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
+              <a href='/partners' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
                 Advertise on Bubble
               </a>
               <a href='#app' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>

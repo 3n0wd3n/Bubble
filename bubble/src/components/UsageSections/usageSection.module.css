@@ -38,11 +38,43 @@
   flex-wrap: wrap;
 }
 
+/* IMAGE */
+
+/* first version of animation */
+
+/* .usage__ImageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 400px;
+}
+
+.usage__createImageWrapper {
+  max-width: 600px;
+  aspect-ratio: 600 / 733;
+}
+.usage__observeImageWrapper {
+  max-width: 600px;
+  aspect-ratio: 600 / 639;
+}
+.usage__followImageWrapper {
+  max-width: 632px;
+  aspect-ratio: 632 / 625;
+}
+
+.usage__imageLayer {
+  position: absolute;
+  inset: 0;
+} */
+
+/* second version of animation */
 .create__image,
 .observe__image,
 .follow__image {
   flex: 1 1 400px;
 }
+
+/* IMAGE */
 
 .create__image,
 .follow__image {
@@ -119,12 +151,6 @@
   .create__content .create__image,
   .create__content .create__container {
     flex: unset;
-  }
-
-  .create__image:hover,
-  .observe__image:hover,
-  .follow__image:hover {
-    transform: unset;
   }
 
   .create__container h2,

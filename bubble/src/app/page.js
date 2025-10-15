@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Footer from "../components/Footer/footer";
 import Header from "../components/Header/header";
-import AnotherSN from "../components/WhyAnotherSNSection/anotherSN";
+import AnotherSN from "../components/WhyAnotherSNSection-2dn_version/anotherSN-2nd_version";
 import DownloadApp from "../components/DownloadAppSection/downloadApp";
 import FAQ from "../components/FAQSection/faq";
 import GetStart from "../components/GetStartedSection/getStarted";

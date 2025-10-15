@@ -145,7 +145,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href='/' className='logo'>
+                <Link href='https://www.linkedin.com/company/bubble2025/' className='logo'>
                   <Image src='/LinkedIn.svg' alt='LinkedIn logo' width={24} height={24} />
                 </Link>
               </li>

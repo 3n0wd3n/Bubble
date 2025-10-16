@@ -1,10 +1,28 @@
 "use client";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./header.module.css";
 import { motion } from "framer-motion";
+import styles from "./header.module.css";
 
 export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrolled }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const handleNavClick = (sectionId) => {
+    if (isHome) {
+      const el = document.querySelector(sectionId);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/${sectionId}`);
+      setTimeout(() => {
+        const el = document.querySelector(sectionId);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 500);
+    }
+  };
+
   return (
     <>
       {/* general container */}
@@ -20,7 +38,7 @@ export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrol
           >
             <div className={styles.nav__container}>
               {/* logo */}
-              <Link href='#' className='logo'>
+              <Link href={isHome ? "#" : "/#"} className='logo'>
                 <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
               </Link>
               {/* hamburger */}
@@ -33,7 +51,7 @@ export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrol
               <ul className={`${styles.nav__list} ${isOpen ? styles["nav__list--open"] : ""}`}>
                 <div className={styles.nav__toggle_container}>
                   {/* logo */}
-                  <Link href='#' className={styles.nav__logo_mobile}>
+                  <Link href={isHome ? "#" : "/#"} className={styles.nav__logo_mobile}>
                     <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
                   </Link>
                   <button
@@ -46,25 +64,52 @@ export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrol
                     <span />
                   </button>
                 </div>
-                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
-                  <a href='#about'>Really? Another Social App</a>
+                <li
+                  className={styles.nav__item}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    handleNavClick("#about");
+                  }}
+                >
+                  Really? Another Social App
                 </li>
-                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
-                  <a href='#master'>How To Master Bubble</a>
+                <li
+                  className={styles.nav__item}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    handleNavClick("#create");
+                  }}
+                >
+                  How To Master Bubble
                 </li>
-                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
-                  <a href='#faq'>F&Q</a>
+                <li
+                  className={styles.nav__item}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    handleNavClick("#faq");
+                  }}
+                >
+                  F&Q
                 </li>
-                <li className={styles.nav__item} onClick={() => setIsOpen(!isOpen)}>
-                  <a href='#partners'>Partners</a>
+                <li
+                  className={styles.nav__item}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    handleNavClick("#partners");
+                  }}
+                >
+                  Partners
                 </li>
                 <div className={`${styles.nav__buttons_mobile} ${isOpen ? styles["nav__buttons--open"] : ""}`}>
                   <a href='/partners' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
                     Advertise on Bubble
                   </a>
-                  <a href='#app' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>
+                  <span
+                    onClick={() => handleNavClick("#app")}
+                    className={`${styles.nav__button} ${styles["nav__button--filled"]}`}
+                  >
                     Get the app
-                  </a>
+                  </span>
                 </div>
               </ul>
             </div>
@@ -73,9 +118,12 @@ export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrol
               <a href='/partners' className={`${styles.nav__button} ${styles["nav__button--ghost"]}`}>
                 Advertise on Bubble
               </a>
-              <a href='#app' className={`${styles.nav__button} ${styles["nav__button--filled"]}`}>
+              <span
+                onClick={() => handleNavClick("#partners")}
+                className={`${styles.nav__button} ${styles["nav__button--filled"]}`}
+              >
                 Get the app
-              </a>
+              </span>
             </div>
           </motion.nav>
         </header>

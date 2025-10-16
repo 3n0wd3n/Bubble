@@ -1,10 +1,14 @@
 "use client";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./footer.module.css";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   return (
     <>
       {/* footer */}
@@ -20,7 +24,7 @@ export default function Footer() {
           >
             <nav className={styles.footer__nav}>
               {/* logo */}
-              <Link href='#' className='logo'>
+              <Link href={isHome ? "#" : "/#"} className='logo'>
                 <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
               </Link>
               <div className={styles.footer__nav_item}>

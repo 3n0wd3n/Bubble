@@ -58,6 +58,7 @@
   position: relative;
   text-decoration: none;
   color: var(--secondary);
+  cursor: pointer;
 }
 
 .nav__item::after {
@@ -89,6 +90,7 @@
 .nav__button {
   padding: 8px 20px;
   border-radius: var(--border-radius-btn-primary);
+  cursor: pointer;
 }
 
 .nav__button--filled {

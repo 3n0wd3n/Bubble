@@ -8,10 +8,22 @@
   position: absolute;
   bottom: -300px;
   left: -200px;
-  width: unset;
-  opacity: 0.8;
+  opacity: 1;
   z-index: 0;
   transform: rotate(-30deg);
+  animation: floatBubble 6s ease-in-out infinite;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: rotate(-30deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-30deg) translateY(-20px);
+  }
+  100% {
+    transform: rotate(-30deg) translateY(0);
+  }
 }
 
 .container--partners {
@@ -202,8 +214,27 @@
     flex-direction: column;
   }
 
+  .partners_container {
+    background: linear-gradient(135deg, rgba(243, 243, 243, 0.66) 24%, rgba(0, 255, 213, 0.66) 100%);
+    backdrop-filter: blur(40px);
+  }
+
+  .form_header h1 {
+    font-size: 40px;
+  }
+
   .form_container {
     max-width: 100%;
+    gap: 24px;
+  }
+
+  .step_items,
+  .step_item {
+    gap: 16px;
+  }
+
+  .form_content {
+    gap: 16px;
   }
 
   .form_content textarea {

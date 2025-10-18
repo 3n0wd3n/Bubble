@@ -1,8 +1,8 @@
 .about {
   color: var(--primary);
-  background-color: var(--secondary);
-  /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(90deg, rgba(0, 255, 213, 0.32) 0%, rgba(4, 121, 255, 0.32) 100%); */
+  /* background-color: var(--secondary); */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    linear-gradient(90deg, rgba(0, 255, 213, 0.32) 0%, rgba(4, 121, 255, 0.32) 100%);
 }
 
 .container--about {
@@ -38,7 +38,8 @@
 .about__item p:first-of-type {
   font-weight: 600;
   font-size: 24px;
-  color: var(--secondaryGreen);
+  /* color: var(--secondaryGreen); */
+  color: var(--primary);
 }
 
 .about__item img {

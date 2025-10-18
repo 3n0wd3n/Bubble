@@ -233,6 +233,13 @@
     gap: 16px;
   }
 
+  .delimiter {
+    display: flex;
+    height: 1px;
+    width: 100%;
+    background-color: #a8a8a827;
+  }
+
   .form_content {
     gap: 16px;
   }

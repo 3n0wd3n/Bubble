@@ -2,6 +2,7 @@
   background-color: var(--secondary);
   color: var(--primary);
   width: 100%;
+  z-index: 1;
 }
 
 .footer__nav_container {

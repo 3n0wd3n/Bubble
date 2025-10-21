@@ -7,13 +7,12 @@
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
+  align-items: flex-start;
   flex-direction: row;
   gap: 80px;
   flex-wrap: wrap;
-  padding-top: 80px;
-  padding-bottom: 56px;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding: 89px 64px 56px 64px;
+  height: 89vh;
 }
 
 .intro__content {

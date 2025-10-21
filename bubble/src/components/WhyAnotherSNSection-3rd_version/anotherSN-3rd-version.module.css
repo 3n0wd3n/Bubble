@@ -14,14 +14,15 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/intro_bg.png");
+  /* background: url("/intro_bg.png"); */
+  background: url("/intro_bg_2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* FIRST & SECOND VERSION */
   /* filter: blur(2px); */
   /* THIRD VERSION */
-  filter: blur(2.5px);
+  filter: blur(3px);
   opacity: 0.85;
   transform: scale(1.05);
   z-index: 0;
@@ -38,7 +39,7 @@
   /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     linear-gradient(90deg, rgba(0, 255, 213, 0.64) 0%, rgba(4, 121, 255, 0.64) 100%); */
   /* THIRD VERSION */
-  background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65));
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
   z-index: 1;
 }
 
@@ -51,11 +52,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   gap: 80px;
   padding: 89px 64px;
+  height: 70vh;
 }
 
 .about h2 {

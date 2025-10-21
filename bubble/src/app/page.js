@@ -3,7 +3,8 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer/footer";
 import Header from "../components/Header/header";
-import AnotherSN from "../components/WhyAnotherSNSection-2dn_version/anotherSN-2nd_version";
+import AnotherSN2nd from "../components/WhyAnotherSNSection-2dn_version/anotherSN-2nd_version";
+import AnotherSN3rd from "../components/WhyAnotherSNSection-3rd_version/anotherSN-3rd_version";
 import DownloadApp from "../components/DownloadAppSection/downloadApp";
 import FAQ from "../components/FAQSection/faq";
 import GetStart from "../components/GetStartedSection/getStarted";
@@ -47,7 +48,7 @@ export default function Home() {
       <Header scrolled={scrolled} setScrolled={setScrolled} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
       <main className={styles.main}>
         <Intro isMobile={isMobile} />
-        <AnotherSN />
+        {isMobile ? <AnotherSN2nd /> : <AnotherSN3rd />}
         <UsageSection />
         <DownloadApp />
         <FAQ />

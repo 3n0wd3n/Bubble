@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./anotherSN-2d-version.module.css";
+import styles from "./anotherSN-2nd-version.module.css";
 import { motion } from "framer-motion";
 
 export default function anotherSN() {

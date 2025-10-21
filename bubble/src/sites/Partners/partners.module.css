@@ -193,7 +193,7 @@
 }
 
 .form_submit {
-  color: white;
+  color: var(--secondary);
   background-color: var(--primaryGreen);
   border: none;
   display: flex;

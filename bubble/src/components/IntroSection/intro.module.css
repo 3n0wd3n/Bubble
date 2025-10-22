@@ -12,7 +12,7 @@
   gap: 80px;
   flex-wrap: wrap;
   padding: 89px 64px 56px 64px;
-  height: 89vh;
+  min-height: 89vh;
 }
 
 .intro__content {

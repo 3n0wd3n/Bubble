@@ -1,13 +1,12 @@
-.create_section {
-  background-color: var(--background-sections-lightgray);
+.create_section,
+.follow_section {
+  /* THIS WILL BE USED ONLY WHEN "ANOTHER SECTION 1-3" */
+  /* background-color: var(--background-sections-lightgray); */
+  background-color: var(--primary);
 }
 
 .observe_section {
   background-color: var(--background-sections-darkgray);
-}
-
-.follow_section {
-  background-color: var(--background-sections-lightgray);
 }
 
 .container--create,

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer/footer";
 import Header from "../components/Header/header";
 import AnotherSN2nd from "../components/WhyAnotherSNSection-2dn_version/anotherSN-2nd_version";
-import AnotherSN3rd from "../components/WhyAnotherSNSection-3rd_version/anotherSN-3rd_version";
+import AnotherSN4th from "../components/WhyAnotherSNSection-4th_version/anotherSN-4th_version";
 import DownloadApp from "../components/DownloadAppSection/downloadApp";
 import FAQ from "../components/FAQSection/faq";
 import GetStart from "../components/GetStartedSection/getStarted";
@@ -48,7 +48,7 @@ export default function Home() {
       <Header scrolled={scrolled} setScrolled={setScrolled} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
       <main className={styles.main}>
         <Intro isMobile={isMobile} />
-        {isMobile ? <AnotherSN2nd /> : <AnotherSN3rd />}
+        {isMobile ? <AnotherSN2nd /> : <AnotherSN4th />}
         <UsageSection />
         <DownloadApp />
         <FAQ />

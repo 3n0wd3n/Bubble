@@ -38,8 +38,8 @@ export default function Header({ scrolled, isMobile, isOpen, setIsOpen, setScrol
           >
             <div className={styles.nav__container}>
               {/* logo */}
-              <Link href={isHome ? "#" : "/#"} className='logo'>
-                <Image src='/logo_nav.png' alt='Bubble logo' width={48} height={48} />
+              <Link href={isHome ? "#" : "/#"} className={styles.logo}>
+                <Image src='/logo_navigation.png' alt='Bubble logo' width={48} height={48} />
               </Link>
               {/* hamburger */}
               <button className={styles.nav__toggle} onClick={() => setIsOpen(!isOpen)} aria-label='Toggle navigation'>

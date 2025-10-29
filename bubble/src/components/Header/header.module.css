@@ -24,6 +24,14 @@
   gap: 24px;
 }
 
+.logo {
+  transition: all 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
 .nav__toggle {
   display: none;
   flex-direction: column;

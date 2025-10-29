@@ -171,6 +171,7 @@
   max-width: 368px;
   min-width: 368px;
   border-radius: 20px;
+  font-family: var(--font-figtree), sans-serif;
 }
 
 .form_terms_container {

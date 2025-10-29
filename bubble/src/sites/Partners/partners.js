@@ -10,6 +10,42 @@ export default function PartnersPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(null);
+  const [formData, setFormData] = useState({
+    companyName: "",
+    contactPerson: "",
+    email: "",
+    website: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { companyName, contactPerson, email, website, message } = formData;
+
+    // Text e-mailu
+    const body = `
+    Company name: ${companyName}
+    Contact person: ${contactPerson}
+    Email: ${email}
+    Website: ${website}
+    Message: ${message}
+    `;
+
+    // URL pro mailto
+    const mailtoLink = `mailto:michaelhajny.dev@gmail.com?subject=New Partner Application&body=${encodeURIComponent(
+      body
+    )}`;
+    window.location.href = mailtoLink;
+    console.log("test", body);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +72,7 @@ export default function PartnersPage() {
   }, []);
 
   if (isMobile === null) return null;
+
   return (
     <div className={pageStyles.page}>
       <Header scrolled={scrolled} setScrolled={setScrolled} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -105,7 +142,7 @@ export default function PartnersPage() {
                   part of the adventures.
                 </p>
               </div>
-              <form className={partnersStyles.form_content} action='/subscribe' method='post'>
+              <form className={partnersStyles.form_content} onSubmit={handleSubmit}>
                 <input
                   className={partnersStyles.form_input}
                   type='text'
@@ -113,6 +150,7 @@ export default function PartnersPage() {
                   name='companyName'
                   placeholder='Company name'
                   required
+                  onChange={handleChange}
                 />
                 <div className={partnersStyles.form_content_items_container}>
                   <input
@@ -122,6 +160,7 @@ export default function PartnersPage() {
                     name='contactPerson'
                     placeholder='Contact person name'
                     required
+                    onChange={handleChange}
                   />
                   <input
                     className={partnersStyles.form_input}
@@ -130,6 +169,7 @@ export default function PartnersPage() {
                     name='email'
                     placeholder='Email'
                     required
+                    onChange={handleChange}
                   />
                 </div>
                 <input
@@ -138,15 +178,16 @@ export default function PartnersPage() {
                   id='website'
                   name='website'
                   placeholder='Website'
+                  onChange={handleChange}
                 />
                 <div className={partnersStyles.form_textarea_container}>
                   <p className={partnersStyles.form_textarea_text}>Anything else you would like to share.</p>
                   <textarea
                     className={partnersStyles.form_input}
-                    type='text'
                     id='message'
                     name='message'
                     placeholder='Please let us know ..'
+                    onChange={handleChange}
                   ></textarea>
                 </div>
                 <div className={partnersStyles.form_terms_container}>

@@ -25,10 +25,15 @@
 }
 
 .logo {
+  border-radius: 100%;
+  overflow: hidden;
+  width: 46px;
+  height: 46px;
   transition: all 0.5s ease;
 }
 
 .logo:hover {
+  /* box-shadow: 0 0 48px #00ffd583; */
   transform: scale(1.1);
 }
 
